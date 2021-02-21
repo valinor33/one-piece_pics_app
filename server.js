@@ -16,11 +16,7 @@ app.set("view engine", "ejs");
 
 app.use(express.json());
 
-// require('./routes/routes')(app);
-
-app.get("/", (req, res) => {
-  res.send("Entró");
-});
+require("./routes/routes")(app);
 
 app.listen(APP_PORT, () => {
   console.log(`Listening on port ${APP_PORT}`);
