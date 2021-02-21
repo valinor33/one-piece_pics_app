@@ -9,5 +9,6 @@ apiRouter.get("/", (req, res) => {
   });
 });
 apiRouter.get("/pics", apiController.pics);
+apiRouter.get("/users", apiController.users);
 
 module.exports = apiRouter;
