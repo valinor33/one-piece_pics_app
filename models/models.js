@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://root:root@one-piece-pics-api.uw04g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongodb+srv://root:root@one-piece-pics-api.uw04g.mongodb.net/ one-piece-pics-api?retryWrites=true&w=majority"
 );
 
 mongoose.connection
@@ -10,7 +10,9 @@ mongoose.connection
   .on("error", (error) => console.log(error));
 
 const User = require("./User");
+const Pic = require("./Pic");
 
 module.exports = {
   User,
+  Pic,
 };
