@@ -1,16 +1,16 @@
 const { Pic, User } = require("../models/models");
-const { use } = require("../routes/api");
 
 module.exports = {
-  /* muestra de images */
-  pics: (req, res) => {
-    Pic.find().then((pics) => {
-      res.json(pics);
-    });
-  },
+  // muestra usuarios
   users: (req, res) => {
     User.find().then((users) => {
       res.json(users);
+    });
+  },
+  // muestra tweets
+  tweets: (req, res) => {
+    Pics.find().then((pics) => {
+      res.json(pics);
     });
   },
 };
